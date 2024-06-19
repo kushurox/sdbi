@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+#table_list {
+    position: absolute;
+    background: rgb(45, 88, 38);
+    border-radius: 1.5%;
+    list-style: none;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    min-width: 50vw;
+    height: 20vh;
+    width: 50vw;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#list_item {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover {
+    background: lightgray;
+    color: darkgreen;
+    border: 1px darkgreen solid;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

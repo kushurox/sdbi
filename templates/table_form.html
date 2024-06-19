@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='table_form.css') }}">
+</head>
+<body>
+  <h1>Insert Data:</h1>
+  <form action="{{ url_for('insert', table_name=table_name) }}" method="post">
+      {% for field in fields %}
+        {% if field.dtype == 'text' %}
+            <label for="{{ field.name }}_id"> {{ field.name }} </label>
+            <input type="text" id="{{ field.name }}_id" name="{{ field.name }}" required>
+        {% elif field.dtype == 'integer' %}
+            <label for="{{ field.name }}_id"> {{ field.name }} </label>
+            <input type="number" id="{{ field.name }}_id" name="{{ field.name }}" required>
+        {% elif field.dtype == 'real' %}
+            <label for="{{ field.name }}_id"> {{ field.name }} </label>
+            <input type="number" id="{{ field.name }}_id" step="0.01" name="{{ field.name }}" required>
+        {% endif %}
+      {% endfor %}
+      <button type="submit">Insert</button>
+  </form>
+</body>
+</html>

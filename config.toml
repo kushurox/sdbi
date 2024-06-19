@@ -1,0 +1,22 @@
+# allowed dtyped: integer, text, real, blob and null (not implemented for handling yet)
+
+
+[[table1]]
+name="name"
+dtype="text"
+
+[[table1]]
+name="age"
+dtype="integer"
+
+[[table2]]
+name="life"
+dtype="text"
+
+[[table2]]
+name="death"
+dtype="real"
+
+[[table3]]
+name="ice cream"
+dtype="text"

@@ -1,0 +1,5 @@
+test.py
+server.db
+*/__pycache__
+venv
+.idea
